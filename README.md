@@ -38,11 +38,98 @@ The system is designed as a modular architecture where each component performs a
 
 ## System Workflow
 
+```text
+Website Form
+      │
+      │
+Phone Call
+      │
+      │
+WhatsApp
+      │
+      │
+Email
+      │
+      ▼
+Inbound Trigger
+      │
+      ▼
+Retell AI Voice Receptionist
+      │
+      ▼
+n8n Workflow Engine
+      │
+      ▼
+Claude Sonnet 4
+      │
+      ▼
+Lead Qualification
+      │
+      ▼
+Appointment Booking
+      │
+      ▼
+Custom CRM
+      │
+      ▼
+Supabase Database
+      │
+      ▼
+Sales Team Notification
+```
+
 ## System Architecture
+
+| Component | Technology |
+|-----------|------------|
+| Backend | Node.js |
+| Workflow Automation | n8n |
+| LLM | Claude Sonnet 4 |
+| Voice AI | Retell AI |
+| Database | Supabase |
+| CRM | Custom CRM |
+| Deployment | Docker |
+| Communication Channels | Website Forms, Voice Calls, WhatsApp, Email |
+
 
 ## Key Features
 
 ## Technology Stack
+
+### Backend
+
+- Node.js
+
+### Artificial Intelligence
+
+- Claude Sonnet 4
+
+### Workflow Automation
+
+- n8n
+
+### Voice AI
+
+- Retell AI
+
+### Database
+
+- Supabase
+
+### Deployment
+
+- Docker
+
+### Communication
+
+- WhatsApp
+- Voice
+- Email
+- Website Forms
+
+### CRM
+
+- Custom CRM
 
 ## Project Structure
 
