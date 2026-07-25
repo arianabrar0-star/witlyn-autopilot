@@ -1,6 +1,6 @@
 # Witlyn Autopilot
 
-> AI-powered revenue operating system for high-value service businesses.
+An AI-powered revenue operating system that captures, qualifies, and books inbound leads automatically for high-value service businesses.
 
 ## Overview
 
