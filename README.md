@@ -78,38 +78,45 @@ Supabase Database
 Sales Team Notification
 ```
 
-##System Architecture Diagram
+##System Architecture
 
-                Website Form
-                      │
-Phone ────────────────┤
-                      │
-WhatsApp ─────────────┤
-                      │
-Email ────────────────┘
-                      │
-                      ▼
-             Inbound Gateway
-                      │
-                      ▼
-               Node.js Backend
-                      │
-        ┌─────────────┴─────────────┐
-        │                           │
-        ▼                           ▼
-    Retell AI                 Claude Sonnet 4
-        │                           │
-        └─────────────┬─────────────┘
-                      ▼
-               n8n Workflow Engine
-                      │
-        ┌─────────────┼─────────────┐
-        ▼             ▼             ▼
-   Appointment     Custom CRM   Notifications
-      Booking
-                      │
-                      ▼
-                 Supabase DB
+            ## System Architecture
+
+```text
+                           Inbound Channels
+    ┌──────────────┬──────────────┬──────────────┬──────────────┐
+    │              │              │              │
+ Website Form   Voice Call    WhatsApp        Email
+    │              │              │              │
+    └──────────────┴──────────────┴──────────────┘
+                           │
+                           ▼
+                    Node.js Backend
+                           │
+                           ▼
+                  n8n Workflow Engine
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+        ▼                  ▼                  ▼
+ Claude Sonnet 4      Retell AI         Business Logic
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           │
+                           ▼
+                   Lead Qualification
+                           │
+                           ▼
+                 Appointment Scheduling
+                           │
+            ┌──────────────┴──────────────┐
+            │                             │
+            ▼                             ▼
+      Custom CRM                  Supabase Database
+            │
+            ▼
+   Sales Team Notifications
+```
 
 ## Key Features
 
@@ -161,6 +168,18 @@ Email ────────────────┘
 
 - Custom CRM
 
+## Design Principles
+
+The system is designed around the following engineering principles:
+
+- Event-driven workflow orchestration
+- Modular service architecture
+- API-first communication
+- Separation of concerns
+- Stateless backend services
+- AI-assisted business automation
+- Scalable and containerized deployment
+
 ## Project Structure
 
 ```text
@@ -190,62 +209,75 @@ witlyn-autopilot/
     └── Demo documentation
 ```
 
-## API Integrations
+## External Services
 
-The system integrates multiple external services to automate the inbound sales process.
+The platform integrates with multiple external services to automate the inbound lead lifecycle.
 
 | Service | Purpose |
 |----------|---------|
-| Claude API | Lead qualification and conversational reasoning |
+| Claude Sonnet 4 API | Conversational reasoning and lead qualification |
 | Retell AI | AI voice receptionist |
-| WhatsApp API | Customer communication |
-| Supabase | Database and data persistence |
-| Custom CRM API | Customer and lead management |
+| WhatsApp API | Customer messaging |
+| Supabase | Database and persistent storage |
+| Custom CRM | Lead and customer management |
 | Calendar API | Appointment scheduling |
 
 ## Screenshots
 
-The following screenshots will be added:
+The following engineering assets will be included as the project evolves.
 
-- System Architecture
-- End-to-End Workflow
-- n8n Automation Flow
-- CRM Dashboard
+- System Architecture Diagram
+- Workflow Architecture
+- n8n Workflow
 - Lead Qualification Flow
-- Appointment Booking Flow
+- CRM Synchronization Flow
+- Appointment Scheduling Flow
 
 ## Demo
 
-A complete walkthrough of the system will be available soon.
+A technical walkthrough will be published soon.
 
-The demo will showcase:
+The demonstration will include:
 
-- Inbound lead capture
-- AI voice interaction
-- Lead qualification
-- Appointment booking
+- End-to-end lead processing
+- AI voice conversation
+- Lead qualification workflow
+- Appointment scheduling
 - CRM synchronization
-- Notification workflow
+- System architecture overview
 
 ## Future Improvements
 
-- Multi-language AI conversations
+### Platform
+
 - Multi-tenant architecture
 - Role-based access control
-- Analytics dashboard
-- Human handoff capability
+- Advanced analytics dashboard
+
+### Artificial Intelligence
+
+- Multi-language conversations
 - Knowledge Base (RAG)
-- SMS integration
-- Email automation
-- Conversation history dashboard
+- Human handoff workflow
+
+### Infrastructure
+
 - Kubernetes deployment
+- Horizontal scaling
+- Centralized logging and monitoring
+
+### Communication
+
+- SMS integration
+- Advanced email automation
+- Omnichannel conversation history
 
 ## License
 
-This repository is published for portfolio and educational purposes.
+This repository is provided for portfolio and educational purposes only.
 
-The implementation details, architecture, and documentation are shared to demonstrate engineering capabilities.
+It demonstrates the architecture, engineering decisions, and system design of the Witlyn Autopilot platform. Proprietary implementation details, production workflows, and source code are intentionally omitted.
 
-Commercial use, redistribution, or reproduction of the proprietary Witlyn Autopilot platform is not permitted without written permission from the author.
+Commercial use, redistribution, or reproduction of this material without written permission from the author is prohibited.
 
-© 2026 MD Nazmus Sakib
+© 2026 MD Nazmus Sakib. All rights reserved.
