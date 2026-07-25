@@ -12,7 +12,6 @@ The platform combines AI voice reception, LLM-powered qualification, workflow au
 
 The primary objective is to reduce response time, eliminate manual lead handling, and improve operational efficiency through end-to-end AI automation.
 
-
 ## Problem
 
 Service businesses frequently lose qualified leads because their inbound sales process depends on manual intervention.
