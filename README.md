@@ -1,10 +1,15 @@
-# Witlyn Autopilot
+<img width="1536" height="1024" alt="ChatGPT Image Jul 26, 2026, 12_15_47 AM" src="https://github.com/user-attachments/assets/35e11df5-368f-4665-ae91-9006ce42bef0" /># Witlyn Autopilot
 
 AI-powered Revenue Operations System for High-Value Service Businesses.
 
 > **Engineering Portfolio Repository**
 >
 > This repository showcases the architecture, engineering decisions, and system design behind **Witlyn Autopilot**. Proprietary implementation details and production source code are intentionally excluded.
+
+## System Architecture Diagram
+<img width="1536" height="1024" alt="system architecture diagram" src="https://github.com/user-attachments/assets/cfa79118-530b-4554-950d-c8800395a392" />
+
+
 
 ## Overview
 
