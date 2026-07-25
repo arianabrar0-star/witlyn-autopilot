@@ -78,19 +78,38 @@ Supabase Database
 Sales Team Notification
 ```
 
-## System Architecture
+##System Architecture Diagram
 
-| Component | Technology |
-|-----------|------------|
-| Backend | Node.js |
-| Workflow Automation | n8n |
-| LLM | Claude Sonnet 4 |
-| Voice AI | Retell AI |
-| Database | Supabase |
-| CRM | Custom CRM |
-| Deployment | Docker |
-| Communication Channels | Website Forms, Voice Calls, WhatsApp, Email |
-
+                Website Form
+                      │
+Phone ────────────────┤
+                      │
+WhatsApp ─────────────┤
+                      │
+Email ────────────────┘
+                      │
+                      ▼
+             Inbound Gateway
+                      │
+                      ▼
+               Node.js Backend
+                      │
+        ┌─────────────┴─────────────┐
+        │                           │
+        ▼                           ▼
+    Retell AI                 Claude Sonnet 4
+        │                           │
+        └─────────────┬─────────────┘
+                      ▼
+               n8n Workflow Engine
+                      │
+        ┌─────────────┼─────────────┐
+        ▼             ▼             ▼
+   Appointment     Custom CRM   Notifications
+      Booking
+                      │
+                      ▼
+                 Supabase DB
 
 ## Key Features
 
