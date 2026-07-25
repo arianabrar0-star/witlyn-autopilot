@@ -6,7 +6,7 @@ AI-powered Revenue Operations System for High-Value Service Businesses.
 >
 > This repository showcases the architecture, engineering decisions, and system design behind **Witlyn Autopilot**. Proprietary implementation details and production source code are intentionally excluded.
 
-## System Architecture Diagram
+## System Architecture
 <img width="1024" height="1536" alt="witlyn system architecture" src="https://github.com/user-attachments/assets/8279d157-a624-400f-8400-9c7df25b5426" />
 
 ## Overview
@@ -63,44 +63,6 @@ The system is designed as a modular architecture where each component performs a
         │                  │                  │
         ▼                  ▼                  ▼
  Claude Sonnet 4      Retell AI         Business Rules
-        │                  │                  │
-        └──────────────────┼──────────────────┘
-                           │
-                           ▼
-                   Lead Qualification
-                           │
-                           ▼
-                 Appointment Scheduling
-                           │
-            ┌──────────────┴──────────────┐
-            │                             │
-            ▼                             ▼
-      Custom CRM                  Supabase Database
-            │
-            ▼
-   Sales Team Notifications
-```
-
-## System Architecture
-
-```text
-                           Inbound Channels
-    ┌──────────────┬──────────────┬──────────────┬──────────────┐
-    │              │              │              │
- Website Form   Voice Call    WhatsApp        Email
-    │              │              │              │
-    └──────────────┴──────────────┴──────────────┘
-                           │
-                           ▼
-                    Node.js Backend
-                           │
-                           ▼
-                  n8n Workflow Engine
-                           │
-        ┌──────────────────┼──────────────────┐
-        │                  │                  │
-        ▼                  ▼                  ▼
- Claude Sonnet 4      Retell AI         Business Logic
         │                  │                  │
         └──────────────────┼──────────────────┘
                            │
