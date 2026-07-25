@@ -7,10 +7,7 @@ AI-powered Revenue Operations System for High-Value Service Businesses.
 > This repository showcases the architecture, engineering decisions, and system design behind **Witlyn Autopilot**. Proprietary implementation details and production source code are intentionally excluded.
 
 ## System Architecture Diagram
-![Uploading witlyn system architecture.png…]()
-
-
-
+<img width="1024" height="1536" alt="witlyn system architecture" src="https://github.com/user-attachments/assets/8279d157-a624-400f-8400-9c7df25b5426" />
 
 ## Overview
 
