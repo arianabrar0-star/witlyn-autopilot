@@ -1,0 +1,105 @@
+Witlyn Autopilot
+
+Inbound Lead Processing Workflow
+
++---------------------------------------------------------------+
+| Customer
+
+↓
+
+Submit Website Form                                             |
++---------------------------------------------------------------+
+
++---------------------------------------------------------------+
+| NODE.JS BACKEND     
+
+Receive Request
+
+↓
+
+Validate Input
+
+↓
+
+Authenticate Request
+
+↓
+
+Create Workflow Event                                           |
++---------------------------------------------------------------+
+
++---------------------------------------------------------------+
+| n8n
+
+Trigger Workflow
+
+↓
+
+Normalize Lead Data
+
+↓
+
+Call Claude
+
+↓
+
+Receive Response
+
+↓
+
+Evaluate Business Rules                                         |
++---------------------------------------------------------------+
+
++---------------------------------------------------------------+
+| AI SERVICES         
+
+Claude Sonnet
+
+↓
+
+Extract Intent
+
+↓
+
+Qualify Lead
+
+↓
+
+Generate Structured Output                                      |
++---------------------------------------------------------------+
+
++---------------------------------------------------------------+
+| BUSINESS SYSTEMS    
+Business Rules
+
+↓
+
+Qualified?
+
+YES
+
+↓
+
+Calendar Check
+
+↓
+
+Book Appointment
+
+↓
+
+Update CRM
+
+↓
+
+Store Database
+
+↓
+
+Send Notifications
+
+↓
+
+End                                                             |
++---------------------------------------------------------------+
+
