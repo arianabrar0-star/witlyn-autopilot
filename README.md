@@ -1,4 +1,4 @@
-<img width="1536" height="1024" alt="ChatGPT Image Jul 26, 2026, 12_15_47 AM" src="https://github.com/user-attachments/assets/35e11df5-368f-4665-ae91-9006ce42bef0" /># Witlyn Autopilot
+# Witlyn Autopilot
 
 AI-powered Revenue Operations System for High-Value Service Businesses.
 
