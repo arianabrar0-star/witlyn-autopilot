@@ -78,7 +78,7 @@ The system is designed as a modular architecture where each component performs a
    Sales Team Notifications
 ```
 
-##System Architecture
+## System Architecture
 
 ```text
                            Inbound Channels
