@@ -1,6 +1,6 @@
 # Witlyn Autopilot
 
-An AI-powered revenue operating system that captures, qualifies, and books inbound leads automatically for high-value service businesses.
+AI-powered Revenue Operations System for High-Value Service Businesses.
 
 > **Engineering Portfolio Repository**
 >
@@ -10,7 +10,7 @@ An AI-powered revenue operating system that captures, qualifies, and books inbou
 
 Witlyn Autopilot is an AI-powered revenue operating system designed for high-value service businesses.
 
-The system automates the complete inbound lead lifecycle—from the moment a prospect submits a form, calls the business, or sends a WhatsApp message until the lead is qualified, booked, scored, and synchronized with the CRM.
+The system automates the complete inbound lead lifecycle—from the moment a prospect submits a form, calls the business, or sends a WhatsApp message until the lead is qualified, booked, and synchronized with the CRM.
 
 The platform combines AI voice reception, LLM-powered qualification, workflow automation, calendar scheduling, CRM synchronization, and real-time notifications into a single production workflow.
 
@@ -43,48 +43,42 @@ The system is designed as a modular architecture where each component performs a
 ## System Workflow
 
 ```text
-Website Form
-      │
-      │
-Phone Call
-      │
-      │
-WhatsApp
-      │
-      │
-Email
-      │
-      ▼
-Inbound Trigger
-      │
-      ▼
-Retell AI Voice Receptionist
-      │
-      ▼
-n8n Workflow Engine
-      │
-      ▼
-Claude Sonnet 4
-      │
-      ▼
-Lead Qualification
-      │
-      ▼
-Appointment Booking
-      │
-      ▼
-Custom CRM
-      │
-      ▼
-Supabase Database
-      │
-      ▼
-Sales Team Notification
+                           Inbound Channels
+    ┌──────────────┬──────────────┬──────────────┬──────────────┐
+    │              │              │              │
+ Website Form   Voice Call    WhatsApp        Email
+    │              │              │              │
+    └──────────────┴──────────────┴──────────────┘
+                           │
+                           ▼
+                    Node.js Backend
+                           │
+                           ▼
+                  n8n Workflow Engine
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+        ▼                  ▼                  ▼
+ Claude Sonnet 4      Retell AI         Business Rules
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           │
+                           ▼
+                   Lead Qualification
+                           │
+                           ▼
+                 Appointment Scheduling
+                           │
+            ┌──────────────┴──────────────┐
+            │                             │
+            ▼                             ▼
+      Custom CRM                  Supabase Database
+            │
+            ▼
+   Sales Team Notifications
 ```
 
 ##System Architecture
-
-            ## System Architecture
 
 ```text
                            Inbound Channels
@@ -121,6 +115,12 @@ Sales Team Notification
             ▼
    Sales Team Notifications
 ```
+
+## Architecture Overview
+
+The platform follows an event-driven, modular architecture where inbound customer interactions trigger automated workflows that coordinate AI services, business logic, CRM synchronization, and customer notifications.
+
+Each component has a dedicated responsibility, enabling scalability, maintainability, and loose coupling between services.
 
 ## Key Features
 
@@ -192,25 +192,27 @@ witlyn-autopilot/
 ├── README.md
 │
 ├── backend/
-│   └── Documentation for backend architecture
+│   └── README.md
 │
 ├── docs/
-│   ├── Architecture
-│   ├── API Overview
-│   ├── Deployment Guide
-│   └── Design Decisions
+│   ├── architecture.md
+│   ├── api-overview.md
+│   ├── deployment.md
+│   └── design-decisions.md
 │
 ├── workflows/
-│   └── n8n workflow documentation
+│   └── README.md
 │
 ├── prompts/
-│   └── Example AI prompts
+│   └── qualification-prompt-example.md
 │
 ├── screenshots/
-│   └── Architecture and workflow screenshots
+│   ├── architecture-diagram.png
+│   ├── workflow-diagram.png
+│   └── n8n-workflow.png
 │
 └── demo/
-    └── Demo documentation
+    └── demo.md
 ```
 
 ## External Services
@@ -221,17 +223,19 @@ The platform integrates with multiple external services to automate the inbound 
 |----------|---------|
 | Claude Sonnet 4 API | Conversational reasoning and lead qualification |
 | Retell AI | AI voice receptionist |
-| WhatsApp API | Customer messaging |
+| WhatsApp Business Platform | Customer messaging |
 | Supabase | Database and persistent storage |
 | Custom CRM | Lead and customer management |
 | Calendar API | Appointment scheduling |
 
 ## Screenshots
 
-The following engineering assets will be included as the project evolves.
+> **Coming Soon**
+
+The repository will include visual documentation for the following components:
 
 - System Architecture Diagram
-- Workflow Architecture
+- End-to-End Workflow Diagram
 - n8n Workflow
 - Lead Qualification Flow
 - CRM Synchronization Flow
