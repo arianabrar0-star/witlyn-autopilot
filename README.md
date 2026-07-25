@@ -15,6 +15,21 @@ The primary objective is to reduce response time, eliminate manual lead handling
 
 ## Problem
 
+Service businesses frequently lose qualified leads because their inbound sales process depends on manual intervention.
+
+Common operational challenges include:
+
+- Slow response to website forms and inbound calls
+- Missed after-hours and weekend inquiries
+- Manual lead qualification by sales staff
+- Inconsistent follow-up across communication channels
+- Manual CRM updates and fragmented customer data
+- Delayed appointment scheduling
+
+These operational bottlenecks increase response time, reduce conversion rates, and create unnecessary administrative work for sales teams.
+
+
+
 ## Solution
 
 ## System Workflow
