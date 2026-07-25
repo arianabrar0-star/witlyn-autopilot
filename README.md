@@ -281,3 +281,7 @@ It demonstrates the architecture, engineering decisions, and system design of th
 Commercial use, redistribution, or reproduction of this material without written permission from the author is prohibited.
 
 © 2026 MD Nazmus Sakib. All rights reserved.
+
+> **Engineering Portfolio Repository**
+>
+> This repository showcases the architecture, engineering decisions, and system design behind **Witlyn Autopilot**. Proprietary implementation details and production source code are intentionally excluded.
