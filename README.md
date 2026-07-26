@@ -43,43 +43,7 @@ The platform receives inbound requests from multiple communication channels, pro
 
 The system is designed as a modular architecture where each component performs a dedicated responsibility while remaining loosely coupled through APIs and workflow automation.
 
-## System Workflow
 
-```text
-                           Inbound Channels
-    ┌──────────────┬──────────────┬──────────────┬──────────────┐
-    │              │              │              │
- Website Form   Voice Call    WhatsApp        Email
-    │              │              │              │
-    └──────────────┴──────────────┴──────────────┘
-                           │
-                           ▼
-                    Node.js Backend
-                           │
-                           ▼
-                  n8n Workflow Engine
-                           │
-        ┌──────────────────┼──────────────────┐
-        │                  │                  │
-        ▼                  ▼                  ▼
- Claude Sonnet 4      Retell AI         Business Rules
-        │                  │                  │
-        └──────────────────┼──────────────────┘
-                           │
-                           ▼
-                   Lead Qualification
-                           │
-                           ▼
-                 Appointment Scheduling
-                           │
-            ┌──────────────┴──────────────┐
-            │                             │
-            ▼                             ▼
-      Custom CRM                  Supabase Database
-            │
-            ▼
-   Sales Team Notifications
-```
 
 ## Architecture Overview
 
